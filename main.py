@@ -9,7 +9,7 @@ gpt_client = openai.Client(api_key=OPENAI_API_KEY)
 
 def chat_with_gpt(prompt):
     response = gpt_client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4-turbo",
         messages=[{"role": "user", "content": prompt}]
     )
     return response.choices[0].message.content.strip()
